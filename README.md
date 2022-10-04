@@ -62,3 +62,4 @@ The backend allows you to edit the configuration of TinyCheck, add extended IOCs
 - Zeek and Suricata awesome maintainers.
 - virtual-keyboard.js.org & loading.io guys.
 - Yan Zhu for his awesome Spectre CSS lib (https://picturepan2.github.io/spectre/)
+- Marek Bujko (Slovak language).
