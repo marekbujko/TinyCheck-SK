@@ -58,8 +58,8 @@ Backend umožňuje upravovať konfiguráciu TinyCheck, pridávať rozšírené I
 
 **Iné**
 - GReAT (skvelí) kolegovia.
-- Tatyana, Kristina, Christina a Arnaud z Kaspersky (podpora IOC)
-- Zeek a Suricata úžasní správcovia.
+- Tatyana, Kristina, Christina a Arnaud z Kaspersky (podpora a IOC)
+- Zeek a Suricata, úžasní správcovia.
 - Ľudia z virtual-keyboard.js.org a loading.io.
 - Yan Zhu za jeho úžasnú Spectre CSS knižnicu (https://picturepan2.github.io/spectre/)
 - Marek Bujko (slovenská lokalizácia).
