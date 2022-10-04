@@ -46,7 +46,7 @@ Backend umožňuje upravovať konfiguráciu TinyCheck, pridávať rozšírené I
 
 **Ľudia, ktorí poskytli niektoré IOC**
 - [Cian Heasley](https://twitter.com/nscrutables) pre jeho Android stalkerware IOC repozitár, k dispozícii tu: https://github.com/diskurse/android-stalkerware
-- [Echap](https://github.com/AssoEchap) pre ich úžasné stalkerware IOC repozitár, k dispozícii tu: https://github.com/AssoEchap/stalkerware-indicators
+- [Echap](https://github.com/AssoEchap) pre ich úžasný stalkerware IOC repozitár, k dispozícii tu: https://github.com/AssoEchap/stalkerware-indicators
 - [Emilien](https://twitter.com/__Emilien__) pre jeho pravidlá Stratum, ktoré sú k dispozícii tu: https://github.com/kwouffe/cryptonote-hunt
 - [Costin Raiu](https://twitter.com/craiu) pre jeho domény geo-tracker, ktoré sú k dispozícii tu: https://github.com/craiu/mobiletrackers/blob/master/list.txt
 
