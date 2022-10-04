@@ -2,64 +2,64 @@
 
 ![Architecture](/assets/network-home.png)
 
-### Description
+### Popis
 
-TinyCheck allows you to easily capture network communications from a smartphone or any device which can be associated to a Wi-Fi access point in order to quickly analyze them. This can be used to check if any suspect or malicious communication is outgoing from a smartphone, by using heuristics or specific Indicators of Compromise (IoCs).
+TinyCheck umožňuje jednoducho zachytiť sieťovú komunikáciu zo smartfónu alebo akéhokoľvek zariadenia, ktoré možete pripojiť k prístupovému bodu Wi-Fi a rýchlo ju analyzovať. Pomocou heuristiky alebo špecifických indikátorov kompromitácie (IoC) tak môžete skontrolovať, či zo smartfónu odchádza podozrivá alebo škodlivá komunikácia.
 
-The idea of TinyCheck emerged in a meeting about stalkerware with a [French women's shelter](https://www.centre-hubertine-auclert.fr). During this meeting we talked about how to easily detect [stalkerware](https://stopstalkerware.org/) without installing very technical apps nor doing forensic analysis on the victim's smartphone. The initial concept was to develop a tiny kiosk device based on Raspberry Pi which can be used by non-tech people to test their smartphones against malicious communications issued by stalkerware or any spyware.
+Myšlienka TinyCheck vznikla na stretnutí o stalkerware s [francúzskym útulkom pre ženy](https://www.centre-hubertine-auclert.fr). Počas tohto stretnutia hovorili o tom, ako ľahko zistiť [stalkerware](https://stopstalkerware.org/) bez inštalácie veľmi technických aplikácií alebo forenznej analýzy smartfónu obete. Pôvodným konceptom bolo vyvinúť malé kioskové zariadenie založené na Raspberry Pi, ktoré môžu používať ľudia bez technických znalostí na testovanie svojich smartfónov proti škodlivej komunikácii stalkerského softvéru alebo akéhokoľvek spyware.
 
-Of course, TinyCheck can also be used to spot any malicious communications from cybercrime to state-sponsored implants. It allows the end-user to push their own extended Indicators of Compromise via a backend in order to detect some ghosts over the wire.
+Samozrejme, TinyCheck sa dá použiť aj na odhalenie akejkoľvek škodlivej komunikácie od počítačovej kriminality až po štátom sponzorované útoky. Umožňuje koncovému používateľovi použiť vlastné rozšírené indikátory kompromitácie prostredníctvom backendu s cieľom odhaliť "duchov" na sieti.
 
-<p align="center"><strong>If you need more documentation on how to install it, use it and the internals, don't hesitate to take a look at the <a href="https://github.com/KasperskyLab/TinyCheck/wiki">TinyCheck Wiki</a>.</strong></p>
+<p align="center"><strong>Ak potrebujete viac informácií o tom, ako ho nainštalovať, používať a o jeho funkciách, neváhajte sa pozrieť na <a href="https://github.com/KasperskyLab/TinyCheck/wiki">TinyCheck Wiki (anglicky)</a>.</strong></p>
 
-<p align="center">If you have any question about the project, want to contribute or just send your feedback, <br />don't hesitate to contact us at tinycheck[@]kaspersky[.]com.</p>
+<p align="center">Ak máte akékoľvek otázky týkajúce sa projektu, chcete prispieť alebo len poslať svoj názor, <br />neváhajte nás kontaktovať na adrese tinycheck[@]kaspersky[.]com.</p>
 
-### Use cases
+### Možnosti použitia
 
-TinyCheck can be used in several ways by individuals and entities:
+TinyCheck môžu jednotlivci a subjekty používať viacerými spôsobmi:
 
-- Over a network - TinyCheck is installed on a network and can be accessed from a workstation via a browser.
-- In kiosk mode - TinyCheck can be used as a kiosk to allow visitors to test their own devices.
-- Fully standalone - By using a powerbank, two Wi-Fi interfaces or a 4G dongle and a small touch screen [like in this video](https://twitter.com/felixaime/status/1331535790392946689), you can tap any device anywhere.
+- Cez sieť - TinyCheck je nainštalovaný v sieti a je prístupný z pracovnej stanice prostredníctvom prehliadača.
+- V režime kiosku - TinyCheck možete použiť ako kiosk, aby si návštevníci mohli otestovať vlastné zariadenia.
+- Úplne samostatne - pomocou powerbanky, dvoch rozhraní Wi-Fi alebo 4G dongle a malej dotykovej obrazovky [ako na videu](https://twitter.com/felixaime/status/1331535790392946689).
 
-### Installation
+### Inštalácia
 
-Please check the few steps in the [Wiki's Installation Page](https://github.com/KasperskyLab/TinyCheck/wiki/TinyCheck-installation).
+Tu nájdete niekoľko krokov na [Wiki inštalačnej stránke - anglicky](https://github.com/KasperskyLab/TinyCheck/wiki/TinyCheck-installation).
 
-### Meet the frontend
+### Zoznámte sa s frontendom
 
-The frontend - which can be accessed from `http://tinycheck.local` is a kind of tunnel which help the user throughout the process of network capture and reporting. It allows the user to setup a Wi-Fi connection to an existing Wi-Fi network, create an ephemeral Wi-Fi network, capture the communications and show a report to the user... in less than one minute, 5 clicks and without any technical knowledge.
+Frontend - ktorý je prístupný z `http://tinycheck.local` je druh tunela, ktorý pomáha používateľovi v celom procese zachytávania a reportingu siete. Umožňuje používateľovi nastaviť pripojenie Wi-Fi k existujúcej sieti Wi-Fi, vytvoriť efemérnu sieť Wi-Fi, zachytiť komunikáciu a zobraziť používateľovi správu... za menej ako jednu minútu, 5 kliknutí a bez akýchkoľvek technických znalostí.
 
 ![Frontend](/assets/frontend.png)
 
-### Meet the backend
+### Zoznámte sa s backendom
 
-Once installed, you can connect yourself to the TinyCheck backend by browsing the URL `https://tinycheck.local` and accepting the SSL self-signed certificate.
+Po inštalácii sa môžete pripojiť k backendu TinyCheck vyhľadaním adresy URL `https://tinycheck.local` a prijatím certifikátu SSL s vlastným podpisom.
 
 ![Backend](/assets/backend.png)
 
-The backend allows you to edit the configuration of TinyCheck, add extended IOCs and whitelisted elements in order to prevent false positives. Several IOCs are already provided such as few suricata rules, FreeDNS, Name servers, CIDRs known to host malicious servers and so on.
+Backend umožňuje upravovať konfiguráciu TinyCheck, pridávať rozšírené IOC a prvky na bielych zoznamoch s cieľom zabrániť falošným poplachom. Niekoľko IOC je už k dispozícii, napríklad niekoľko pravidiel suricata, FreeDNS, Name servers, CIDR, o ktorých je známe, že hostia škodlivé servery a podobne.
 
-### Special thanks
+### Špeciálne poďakovanie
 
-**Felix Aime**, for his idea and passion while developing and testing this project. Felix is a main contributor and we really appreciate his work on TinyCheck.
+**Felix Aime**, za jeho nápad a nadšenie pri vývoji a testovaní tohto projektu. Felix je hlavným prispievateľom a my si jeho prácu na projekte TinyCheck veľmi vážime.
 
-**People who provided some IOCs**
-- [Cian Heasley](https://twitter.com/nscrutables) for his android stalkerwares IOC repo, available here: https://github.com/diskurse/android-stalkerware
-- [Echap](https://github.com/AssoEchap) for their stalkerwares awesome IOCs repo, available here: https://github.com/AssoEchap/stalkerware-indicators
-- [Emilien](https://twitter.com/__Emilien__) for his Stratum rules, available here: https://github.com/kwouffe/cryptonote-hunt
-- [Costin Raiu](https://twitter.com/craiu) for his geo-tracker domains, available here: https://github.com/craiu/mobiletrackers/blob/master/list.txt
+**Ľudia, ktorí poskytli niektoré IOC**
+- [Cian Heasley](https://twitter.com/nscrutables) pre jeho Android stalkerware IOC repozitár, k dispozícii tu: https://github.com/diskurse/android-stalkerware
+- [Echap](https://github.com/AssoEchap) pre ich úžasné stalkerware IOC repozitár, k dispozícii tu: https://github.com/AssoEchap/stalkerware-indicators
+- [Emilien](https://twitter.com/__Emilien__) pre jeho pravidlá Stratum, ktoré sú k dispozícii tu: https://github.com/kwouffe/cryptonote-hunt
+- [Costin Raiu](https://twitter.com/craiu) pre jeho domény geo-tracker, ktoré sú k dispozícii tu: https://github.com/craiu/mobiletrackers/blob/master/list.txt
 
-**Code review**
+**Revízia kódu**
 - Dan Demeter [@_xdanx](https://twitter.com/_xdanx)
 - Maxime Granier
 - Florian Pires [@Florian_Pires](https://twitter.com/Florian_Pires)
 - Ivan Kwiatkowski [@JusticeRage](https://twitter.com/JusticeRage)
 
-**Others**
-- GReAT colleagues.
-- Tatyana, Kristina, Christina and Arnaud from Kaspersky (Support and IOCs)
-- Zeek and Suricata awesome maintainers.
-- virtual-keyboard.js.org & loading.io guys.
-- Yan Zhu for his awesome Spectre CSS lib (https://picturepan2.github.io/spectre/)
-- Marek Bujko (Slovak language).
+**Iné**
+- GReAT (skvelí) kolegovia.
+- Tatyana, Kristina, Christina a Arnaud z Kaspersky (podpora IOC)
+- Zeek a Suricata úžasní správcovia.
+- Ľudia z virtual-keyboard.js.org a loading.io.
+- Yan Zhu za jeho úžasnú Spectre CSS knižnicu (https://picturepan2.github.io/spectre/)
+- Marek Bujko (slovenská lokalizácia).
