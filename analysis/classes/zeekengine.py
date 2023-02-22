@@ -269,8 +269,8 @@ class ZeekEngine(object):
             for record in ParseZeekLogs(os.path.join(dir, "files.log"), output_format="json", safe_headers=False):
                 if record is not None:
                     f = {"filename": record["filename"],
-                         "ip_src": record["tx_hosts"],
-                         "ip_dst": record["rx_hosts"],
+                         "ip_src": record["id.orig_h"],
+                         "ip_dst": record["id.orig_p"],
                          "mime_type": record["mime_type"],
                          "sha1": record["sha1"]}
                     if f not in self.files:
