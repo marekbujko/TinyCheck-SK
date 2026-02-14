@@ -6,7 +6,7 @@ HOST="$( hostname )"
 IFACES="$( ip a s | grep -Eo '[a-z0-9]{4,15}\: ' | grep -oE [a-z0-9]+ )"
 IFACE_OUT=""
 IFACE_IN=""
-LOCALES=(en fr cat es ru pt de it)
+LOCALES=(en fr cat es ru pt de it sk)
 
 welcome_screen() {
 cat << "EOF"
